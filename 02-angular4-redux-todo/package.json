@@ -1,0 +1,55 @@
+{
+  "homepage": "https://daggerok.github.io/angular-examples",
+  "name": "angular-examples",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod --aot",
+    "lint": "ng lint",
+    "preserve": "yarn -i; npm-run-all preserve:*",
+    "preserve:build": "yarn build",
+    "preserve:serve": "serve -C -p 3000 -s -o ./dist",
+    "predeploy": "yarn -i; npm-run-all predeploy:*",
+    "predeploy:build": "yarn build -- --base-href='/angular-examples/'",
+    "predeploy:404-html": "ncp ./dist/index.html ./dist/404.html",
+    "deploy": "gh-pages -d ./dist -b gh-pages -m \"Github Pages $(date +%Y-%m-%d) deployment\""
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "4.4.1",
+    "@angular/compiler": "4.4.1",
+    "@angular/core": "4.4.1",
+    "@angular/forms": "4.4.1",
+    "@angular/http": "4.4.1",
+    "@angular/platform-browser": "4.4.1",
+    "@angular/platform-browser-dynamic": "4.4.1",
+    "@angular/router": "4.4.1",
+    "core-js": "2.5.1",
+    "rxjs": "5.4.3",
+    "zone.js": "0.8.17"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.4.2",
+    "@angular/compiler-cli": "4.4.1",
+    "@types/node": "8.0.28",
+    "codelyzer": "3.2.0",
+    "gh-pages": "1.0.0",
+    "livereload": "0.6.2",
+    "ncp": "2.0.0",
+    "npm-run-all": "4.1.1",
+    "serve": "6.1.0",
+    "ts-node": "3.3.0",
+    "tslint": "5.7.0",
+    "typescript": ">=2.1.0 <2.4.0"
+  },
+  "livereload": {
+    "exclusions": [
+      "node_modules",
+      "*.json",
+      "README.*",
+      "yarn.lock"
+    ]
+  }
+}
