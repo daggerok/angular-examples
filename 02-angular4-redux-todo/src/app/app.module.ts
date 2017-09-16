@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
+import { AppState, initialState, rootReducer } from './store';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    NgReduxModule,
     BrowserModule,
     FormsModule,
     HttpModule
@@ -17,4 +20,8 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private ngRedux: NgRedux<AppState>) {
+    this.ngRedux.configureStore(rootReducer, initialState);
+  }
+}
