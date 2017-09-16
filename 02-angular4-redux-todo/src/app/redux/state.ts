@@ -1,4 +1,4 @@
-import { Todo } from './todo';
+import { Todo } from '../todo';
 
 export interface AppState {
   todos: Todo[];
@@ -9,7 +9,3 @@ export const initialState: AppState = {
   todos: [],
   lastUpdate: null,
 };
-
-export function rootReducer(state, action) {
-  return state;
-}
