@@ -1,4 +1,8 @@
-# Angular4ReduxTodo [![Build Status](https://travis-ci.org/daggerok/angular-examples.svg)](https://travis-ci.org/daggerok/angular-examples)
+# TODO App using Angular 4 Redux store [![Build Status](https://travis-ci.org/daggerok/angular-examples.svg)](https://travis-ci.org/daggerok/angular-examples)
+
+[read more about bootswatch 4](https://bootswatch.com/4-alpha/materia/)
+
+**default REAMDE.md:**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
 

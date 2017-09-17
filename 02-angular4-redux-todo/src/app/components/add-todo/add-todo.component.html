@@ -1,0 +1,48 @@
+<form (submit)="addTodo()" #todoForm="ngForm">
+  <fieldset>
+    <legend>add TODO</legend>
+    <div class="form-group">
+      <input requiredtype="text"
+             class="form-control"
+             id="description"
+             name="description"
+             [(ngModel)]="model.description"
+             #description="ngModel"
+             placeholder="Enter description">
+    </div>
+
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             id="responsible"
+             name="responsible"
+             [(ngModel)]="model.responsible"
+             #responsible="ngModel"
+             placeholder="Enter responsible">
+    </div>
+
+    <div class="form-group">
+      <select class="form-control"
+              [(ngModel)]="model.priority"
+              #priority="ngModel"
+              name="priority"
+              id="priority">
+        <option value="low">Low</option>
+        <option value="normal">Normal</option>
+        <option value="height">Height</option>
+      </select>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox"
+               id="isCompleted"
+               name="isCompleted"
+               #isCompleted="ngModel"
+               [(ngModel)]="model.isCompleted"
+               class="form-check-input">completed</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>

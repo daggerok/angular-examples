@@ -2,7 +2,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">{{ title }}</a>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
@@ -26,16 +26,20 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="jumbotron">
+  <h1 class="display-3">TODO App</h1>
+  <p>
+    This is a simple TODO application using Angular 4 and Redux store (@angular-redux/store).
+  </p>
+  <p>
+    <a class="btn btn-primary btn-lg" href="https://github.com/daggerok/angular-examples/tree/master/02-angular4-redux-todo">
+      Learn more
+    </a>
+  </p>
+</div>
 
-  <div class="card">
-    <h3 class="card-header">{{title}}</h3>
-
-    <div class="card-block">
-      <h5 class="card-title">Angular 2</h5>
-      <h6 class="card-subtitle text-muted">Redux Store</h6>
-    </div>
-
-    <app-todo-overview></app-todo-overview>
-  </div>
+<div class="container-fluid">
+  <app-add-todo></app-add-todo>
+  <app-todo-overview></app-todo-overview>
+  <app-todo-list></app-todo-list>
 </div>

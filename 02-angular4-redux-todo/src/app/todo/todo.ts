@@ -1,7 +1,7 @@
 export interface Todo {
   id: number,
-  desctipyion: string,
-  reposnsible: string;
+  description: string,
+  responsible: string;
   priority: string,
   isCompleted: boolean,
 };

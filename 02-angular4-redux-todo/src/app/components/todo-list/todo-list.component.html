@@ -1,0 +1,33 @@
+<table class="table table-striped table-hover table-bordered"
+       *ngIf="(todos | async).length > 0">
+
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Description</th>
+    <th>Responsible</th>
+    <th>Priority</th>
+    <th>Done</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let todo of todos | async" (click)="toggle(todo.id)">
+    <td>{{ todo.id }}</td>
+    <td>{{ todo.description }}</td>
+    <td>{{ todo.responsible }}</td>
+    <td>{{ todo.priority }}</td>
+    <td>
+      <input type="checkbox"
+             id="isCompleted-{{ todo.id }}"
+             name="isCompleted-{{ todo.id }}"
+             [(ngModel)]="todo.isCompleted"
+             #isCompleted="ngModel"
+             class="text-center"/>
+      <button class="btn btn-sm btn-danger"
+              style="border-radius: 50%"
+      (click)="remove(todo.id)">&ndash;</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

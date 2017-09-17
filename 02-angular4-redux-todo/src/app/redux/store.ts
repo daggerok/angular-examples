@@ -1,16 +1,17 @@
 import { initialState } from './state';
 import { ADD_TODO, REMOVE_TODO, REMOVE_TODOS, TOGGLE_TODO, } from './actions';
+import { seq } from './sequence.service';
 
 export function rootReducer(state, action: any) {
+
   const stateTodos = state.todos;
   const lastUpdate = { lastUpdate: new Date() };
-  console.log('action', action);
-  console.dir(state);
+
   switch (action.type) {
 
     case ADD_TODO:
       const { by: todoAdd } = action;
-      todoAdd.id = stateTodos.length;
+      todoAdd.id = seq.next();
       return {
         ...state,
         todos: [
@@ -37,11 +38,14 @@ export function rootReducer(state, action: any) {
 
     case REMOVE_TODO:
       return {
-        ...stateTodos.filter(todo => todo.id !== action.by),
+        todos: [
+          ...stateTodos.filter(todo => todo.id !== action.by),
+        ],
         ...lastUpdate,
       };
 
     case REMOVE_TODOS:
+      seq.reset();
       return {
         ...initialState,
         ...lastUpdate,

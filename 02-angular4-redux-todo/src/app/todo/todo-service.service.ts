@@ -5,7 +5,7 @@ import { ADD_TODO, REMOVE_TODO, REMOVE_TODOS, TOGGLE_TODO } from '../redux/actio
 import { Todo } from './todo';
 
 @Injectable()
-export class TodoServiceService {
+export class TodoService {
 
   @select('todos') todos;
   @select('lastUpdate') lastUpdate;
