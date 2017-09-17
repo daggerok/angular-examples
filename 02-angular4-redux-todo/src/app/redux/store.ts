@@ -4,7 +4,8 @@ import { ADD_TODO, REMOVE_TODO, REMOVE_TODOS, TOGGLE_TODO, } from './actions';
 export function rootReducer(state, action: any) {
   const stateTodos = state.todos;
   const lastUpdate = { lastUpdate: new Date() };
-
+  console.log('action', action);
+  console.dir(state);
   switch (action.type) {
 
     case ADD_TODO:

@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { Todo } from '../todo';
+import { Todo } from '../todo/todo';
 
 export interface BaseAction extends Action {
   type: string;
