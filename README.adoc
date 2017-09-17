@@ -1,6 +1,6 @@
 = angular examples image:https://travis-ci.org/daggerok/angular-examples.svg["Build Status", link="https://travis-ci.org/daggerok/angular-examples"]
 
-This repository is contains angular examples
+This repository contains some examples of usage angular in combinations with different technologies, frameworks and libraries
 
 . link:01-angular4-service-worker/[Angular 4 and Service Worker]
 . link:02-angular4-redux-todo/[TODO app using Angular 4 and Redux]
