@@ -33,6 +33,10 @@ script:
       export TARGET="$ROOT/$path";
       cd $TARGET;
 
+      if [ "$path" == "03-angular4-firebase-auth" ]; then
+        cp -Rf ./src/firebase.config-default.ts ./firebase.config.ts
+      fi;
+
       yarn install;
       yarn predeploy;
       if [ -f npm-debug.log ]; then cat npm-debug.log; fi;

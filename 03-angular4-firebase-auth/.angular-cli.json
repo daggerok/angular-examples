@@ -42,6 +42,21 @@
   ],
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+      "spec": false,
+      "inlineStyle": true
+    },
+    "directive": {
+      "spec": false
+    },
+    "module": {
+      "spec": false
+    },
+    "pipe": {
+      "spec": false
+    },
+    "service": {
+      "spec": false
+    }
   }
 }

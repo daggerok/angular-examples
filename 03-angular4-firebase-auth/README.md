@@ -1,6 +1,12 @@
-# TODO App using Angular 4 Redux store [![Build Status](https://travis-ci.org/daggerok/angular-examples.svg)](https://travis-ci.org/daggerok/angular-examples)
+# Auth App using Angular 4 Firebase [![Build Status](https://travis-ci.org/daggerok/angular-examples.svg)](https://travis-ci.org/daggerok/angular-examples)
 
-[read more about bootswatch 4](https://bootswatch.com/4-alpha/materia/)
+- [TODO](https://www.youtube.com/watch?v=O_jxEC0hWcA)
+
+- [angularfire2 auth](https://github.com/angular/angularfire2/blob/master/docs/1-install-and-setup.md)
+
+- [read more about angularfire2](https://github.com/angular/angularfire2/blob/master/docs/)
+
+- [read more about bootswatch 4](https://bootswatch.com/4-alpha/materia/)
 
 **default REAMDE.md:**
 
