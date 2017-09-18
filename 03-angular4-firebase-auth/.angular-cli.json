@@ -11,7 +11,12 @@
         "./assets",
         "./favicon.ico",
         "./service-worker-register.js",
-        "./service-worker.js"
+        "./service-worker.js",
+        { "glob": "jquery.min.js*", "input": "../node_modules/jquery/dist/", "output": "./vendors" },
+        { "glob": "tether.min.js*", "input": "../node_modules/tether/dist/js/", "output": "./vendors" },
+        { "glob": "popper.min.js*", "input": "../node_modules/popper.js/dist/umd/", "output": "./vendors" },
+        { "glob": "bootstrap.min.js*", "input": "../node_modules/bootstrap/dist/js/", "output": "./vendors" },
+        { "glob": "bootstrap.min.css*", "input": "../node_modules/bootswatch/materia/", "output": "./vendors" }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,13 +24,9 @@
       "tsconfig": "tsconfig.app.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootswatch/materia/bootstrap.min.css",
         "./styles.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/tether/dist/js/tether.min.js",
-        "../node_modules/popper.js/dist/umd/popper.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ],
       "environmentSource": "./environments/environment.ts",
