@@ -25,6 +25,7 @@ script:
   - export ROOT=$PWD
   - >
     for path in \
+      03-angular4-firebase-auth \
       02-angular4-redux-todo \
       01-angular4-service-worker
     do

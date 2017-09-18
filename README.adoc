@@ -4,3 +4,4 @@ This repository contains some examples of usage angular in combinations with dif
 
 . link:01-angular4-service-worker/[Angular 4 and Service Worker]
 . link:02-angular4-redux-todo/[TODO app using Angular 4 and Redux]
+. link:03-angular4-firebase-auth/[Auth app using Angular 4 and Firebase]
